@@ -9,4 +9,5 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 80
-  type: LoadBalancer  # Exposes the service externally (or use NodePort for internal access)
+      nodePort: 30400  # You can specify a port number here or leave it for Kubernetes to assign automatically
+  type: NodePort  # Expose the service through NodePort
